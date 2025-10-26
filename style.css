@@ -1,0 +1,138 @@
+/* 🎯 RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at top, #222 10%, #000 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔲 CONTAINER */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    text-shadow: 2px 3px 4px cyan;
+}
+
+/* 🧮 CALCULATOR BOX */
+#calculator-box {
+  width: 350px;
+  background: #111;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+}
+
+
+
+/* 📟 DISPLAY */
+#display {
+  background: #1b1b1b;
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.8rem;
+  color: #00ff7f;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  letter-spacing: 1px;
+  box-shadow: inset 0 -3px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* 🔢 BUTTONS LAYOUT */
+.calc-bottom {
+
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5rem;
+  user-select: none;
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+/* 🎛️ BUTTON STYLE */
+.button-row button {
+  background: linear-gradient(145deg, #2c2c2c, #111);
+  border: none;
+  border-radius: 0.2rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #000, inset 0 0 4px rgba(255, 255, 255, 0.05);
+  transition: all 0.1s ease-in-out;
+  padding: 0.6rem;
+}
+
+.button-row button:hover {
+  filter: brightness(1.2);
+}
+
+#clear-row {
+    display: flex;
+    justify-content: center;
+}
+
+#clear-row button {
+    padding: 0.6rem 1.5rem;
+
+}
+
+.button-row button:active {
+  transform: scale(0.96);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+/* 🎨 SPECIAL BUTTONS */
+#clearBtn {
+  background: linear-gradient(145deg, #ff4b4b, #c93030);
+  color: #fff;
+}
+
+.operatorBtn {
+  background: linear-gradient(145deg, #ffa500, #cc8400) !important;
+}
+
+#equalBtn {
+  background: linear-gradient(145deg, #3cb371, #228b22);
+  color: #fff;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+  #calculator-box {
+    width: 90%;
+  }
+  #display {
+    font-size: 1.6rem;
+    height: 70px;
+  }
+  .button-row button {
+    font-size: 1rem;
+  }
+}
